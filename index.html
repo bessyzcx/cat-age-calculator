@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Cat Age Calculator - Calculate Your Cat's Human Age | Free Online Tool</title>
+    <meta name="description" content="Free online cat age calculator. Convert your cat's age to human years easily. Calculate cat age from birth date or current age. Available in English and Spanish.">
+    <meta name="keywords" content="cat age calculator, cat years to human years, pet age calculator, cat age converter, calculadora de edad de gatos">
+    <meta name="author" content="Cat Age Calculator">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cat Age Calculator - Calculate Your Cat's Human Age">
+    <meta property="og:description" content="Free online cat age calculator. Convert your cat's age to human years easily.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:image" content="https://yourdomain.com/assets/images/cat-age-calculator.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cat Age Calculator - Calculate Your Cat's Human Age">
+    <meta name="twitter:description" content="Free online cat age calculator. Convert your cat's age to human years easily.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo" data-en="Cat Age Calculator" data-es="Calculadora de Edad de Gatos">
+                    Cat Age Calculator
+                </h1>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Top Banner Ad -->
+            <section class="ads-section ads-top">
+                <div class="ad-container">
+                    <h4 class="ad-label" data-en="Advertisement" data-es="Anuncio">Advertisement</h4>
+                    <!-- AdSense Ad Unit - Top Banner -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                         data-ad-slot="YOUR_AD_SLOT_ID_TOP"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </section>
+            
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2 class="hero-title" data-en="Calculate Your Cat's Age in Human Years" data-es="Calcula la Edad de tu Gato en Años Humanos">
+                    Calculate Your Cat's Age in Human Years
+                </h2>
+                <p class="hero-subtitle" data-en="Find out how old your cat is in human years with our free calculator" data-es="Descubre qué edad tiene tu gato en años humanos con nuestra calculadora gratuita">
+                    Find out how old your cat is in human years with our free calculator
+                </p>
+            </section>
+
+            <!-- Calculator Section -->
+            <section class="calculator">
+                <div class="calculator-container">
+                    <!-- Mode Selector -->
+                    <div class="mode-selector">
+                        <button class="mode-btn active" data-mode="birthdate" data-en="Birth Date" data-es="Fecha de Nacimiento">
+                            Birth Date
+                        </button>
+                        <button class="mode-btn" data-mode="age" data-en="Current Age" data-es="Edad Actual">
+                            Current Age
+                        </button>
+                    </div>
+
+                    <!-- Birth Date Calculator -->
+                    <div class="calc-form active" id="birthdate-form">
+                        <div class="form-group">
+                            <label for="birthdate" data-en="When was your cat born?" data-es="¿Cuándo nació tu gato?">
+                                When was your cat born?
+                            </label>
+                            <input type="date" id="birthdate" class="form-input" required>
+                        </div>
+                        <button type="button" class="calculate-btn" data-en="Calculate Age" data-es="Calcular Edad">
+                            Calculate Age
+                        </button>
+                    </div>
+
+                    <!-- Current Age Calculator -->
+                    <div class="calc-form" id="age-form">
+                        <div class="form-group">
+                            <label for="cat-age" data-en="How old is your cat? (in years)" data-es="¿Qué edad tiene tu gato? (en años)">
+                                How old is your cat? (in years)
+                            </label>
+                            <input type="number" id="cat-age" class="form-input" min="0" max="30" step="0.1" placeholder="Enter age" required>
+                        </div>
+                        <button type="button" class="calculate-btn" data-en="Calculate Human Age" data-es="Calcular Edad Humana">
+                            Calculate Human Age
+                        </button>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div class="results" id="results" style="display: none;">
+                        <div class="result-card">
+                            <h3 class="result-title" data-en="Your Cat's Age" data-es="La Edad de tu Gato">
+                                Your Cat's Age
+                            </h3>
+                            <div class="result-content">
+                                <div class="age-display">
+                                    <span class="cat-age" id="cat-age-result">0</span>
+                                    <span class="age-label" data-en="cat years" data-es="años de gato">cat years</span>
+                                </div>
+                                <div class="equals">=</div>
+                                <div class="age-display">
+                                    <span class="human-age" id="human-age-result">0</span>
+                                    <span class="age-label" data-en="human years" data-es="años humanos">human years</span>
+                                </div>
+                            </div>
+                            <div class="age-info" id="age-info">
+                                <!-- Age information will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Information Section -->
+            <section class="info-section">
+                <h3 class="info-title" data-en="How Cat Age Conversion Works" data-es="Cómo Funciona la Conversión de Edad de Gatos">
+                    How Cat Age Conversion Works
+                </h3>
+                <div class="info-content">
+                    <div class="info-card">
+                        <h4 data-en="Age Conversion Formula" data-es="Fórmula de Conversión de Edad">
+                            Age Conversion Formula
+                        </h4>
+                        <ul>
+                            <li data-en="1 cat year = 15 human years" data-es="1 año de gato = 15 años humanos">1 cat year = 15 human years</li>
+                            <li data-en="2 cat years = 24 human years" data-es="2 años de gato = 24 años humanos">2 cat years = 24 human years</li>
+                            <li data-en="3 cat years = 28 human years" data-es="3 años de gato = 28 años humanos">3 cat years = 28 human years</li>
+                            <li data-en="Each additional year = +4 human years" data-es="Cada año adicional = +4 años humanos">Each additional year = +4 human years</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h4 data-en="Why This Matters" data-es="Por Qué Esto Importa">
+                            Why This Matters
+                        </h4>
+                        <p data-en="Understanding your cat's age in human years helps you provide appropriate care, nutrition, and veterinary attention for their life stage." data-es="Entender la edad de tu gato en años humanos te ayuda a proporcionar el cuidado, nutrición y atención veterinaria apropiados para su etapa de vida.">
+                            Understanding your cat's age in human years helps you provide appropriate care, nutrition, and veterinary attention for their life stage.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AdSense Section - Info Bottom -->
+            <section class="ads-section">
+                <div class="ad-container">
+                    <h4 class="ad-label" data-en="Sponsored" data-es="Patrocinado">Sponsored</h4>
+                    <!-- AdSense Ad Unit - Info Bottom -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                         data-ad-slot="YOUR_AD_SLOT_ID_INFO"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </section>
+
+            <!-- AdSense Section - Calculator Bottom -->
+            <section class="ads-section">
+                <div class="ad-container">
+                    <h4 class="ad-label" data-en="Sponsored" data-es="Patrocinado">Sponsored</h4>
+                    <!-- AdSense Ad Unit - Calculator Bottom -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                         data-ad-slot="YOUR_AD_SLOT_ID"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text" data-en="© 2024 Cat Age Calculator. All rights reserved." data-es="© 2024 Calculadora de Edad de Gatos. Todos los derechos reservados.">
+                    © 2024 Cat Age Calculator. All rights reserved.
+                </p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+                    <a href="#" class="footer-link" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a>
+                    <a href="#" class="footer-link" data-en="Contact" data-es="Contacto">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/calculator.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
